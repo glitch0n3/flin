@@ -875,11 +875,19 @@
         }
 
         .lightbox-img {
-            max-width: 90vw;
-            max-height: 85vh;
+            max-width: 320px;
+            max-height: 320px;
             border-radius: 16px;
             box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
             object-fit: contain;
+            background: white;
+            padding: 1rem;
+        }
+
+        .lightbox-img.menu-lightbox {
+            max-width: 90vw;
+            max-height: 85vh;
+            padding: 0;
         }
 
         .lightbox-close {
@@ -929,40 +937,7 @@
                 grid-template-columns: 1fr;
             }
         }
-        /* LINE QR Code */
-        .line-qr-container {
-            margin-top: 0.75rem;
-            cursor: pointer;
-            display: inline-block;
-            transition: transform 0.3s ease;
-        }
-
-        .line-qr-container:hover {
-            transform: scale(1.03);
-        }
-
-        .line-qr-img {
-            width: 140px;
-            height: 140px;
-            border-radius: 12px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-            border: 2px solid var(--sand-beige);
-        }
-
-        .qr-hint {
-            font-size: 0.7rem;
-            color: var(--deep-moss);
-            text-align: center;
-            margin-top: 0.3rem;
-            opacity: 0.7;
-        }
-
-        @media (max-width: 600px) {
-            .line-qr-img {
-                width: 120px;
-                height: 120px;
-            }
-        }
+        /* LINE QR Lightbox sizing handled in .lightbox-img */
     </style>
     <!-- Language Switcher -->
     <nav class="lang-nav" id="langNav">
@@ -1009,9 +984,9 @@
             <h1 data-i18n="hero_title">A Quiet Ritual for Your Scalp, Mind, and Body</h1>
             <p data-i18n="hero_desc">F.Lin Hair Spa brings Vietnamese-inspired head spa rituals to Bangkok through deep scalp care, soothing massage, and a calming sensory experience.</p>
             <div class="cta-buttons">
-                <a href="#booking" class="btn-primary" data-i18n="book_now">Book Now</a>
+                <a href="javascript:void(0)" onclick="openQrLightbox()" class="btn-primary" data-i18n="book_now">Book Now</a>
                 <a href="#treatments" class="btn-secondary" data-i18n="view_treatments">View Treatments</a>
-                <a href="https://line.me/R/ti/p/@flinspabkk" class="btn-secondary" data-i18n="line_us">LINE Us</a>
+                <a href="https://line.me/R/ti/p/@flinbarber-bkk" class="btn-secondary" data-i18n="line_us">LINE Us</a>
             </div>
             <p class="trust-text" data-i18n="hero_trust">Relaxing head spa ritual • Scalp wellness • Soft luxury experience</p>
         </div>
@@ -1076,7 +1051,7 @@
                 <div class="treatment-body">
                     <p class="treatment-description" data-i18n="treat1_desc">Select four services from our menu — foot scrub, ear cleaning, shaving, massage, facial, wash &amp; dry, or nail care — for a personalized essential relief session</p>
                     <p class="treatment-price">฿700</p>
-                    <a href="#booking" class="treatment-cta" data-i18n="book_treatment">Book This Treatment</a>
+                    <a href="javascript:void(0)" onclick="openQrLightbox()" class="treatment-cta" data-i18n="book_treatment">Book This Treatment</a>
                 </div>
             </div>
 
@@ -1088,7 +1063,7 @@
                 <div class="treatment-body">
                     <p class="treatment-description" data-i18n="treat2_desc">The complete F.Lin experience — all eight signature services from foot scrub to nail care, delivering head-to-toe restoration in one luxurious session</p>
                     <p class="treatment-price">฿1,000</p>
-                    <a href="#booking" class="treatment-cta" data-i18n="book_treatment">Book This Treatment</a>
+                    <a href="javascript:void(0)" onclick="openQrLightbox()" class="treatment-cta" data-i18n="book_treatment">Book This Treatment</a>
                 </div>
             </div>
 
@@ -1100,7 +1075,7 @@
                 <div class="treatment-body">
                     <p class="treatment-description" data-i18n="treat3_desc">A complete sensory ritual combining head spa, ear care, and soothing foot soak for total relaxation</p>
                     <p class="treatment-price">฿1,500</p>
-                    <a href="#booking" class="treatment-cta" data-i18n="book_treatment">Book This Treatment</a>
+                    <a href="javascript:void(0)" onclick="openQrLightbox()" class="treatment-cta" data-i18n="book_treatment">Book This Treatment</a>
                 </div>
             </div>
         </div>
@@ -1263,7 +1238,7 @@
                 <h3 data-i18n="booking_title">Book Your Ritual</h3>
                 
                 <div class="info-item">
-                    <div class="info-icon">📍</div>
+                    <div class="info-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Google_Maps_Logo_2020.svg" alt="Google Maps" style="width:28px; height:28px;"></div>
                     <div class="info-content">
                         <h4 data-i18n="address_label">Address</h4>
                         <p data-i18n="address_text">F.Lin Barber & Massage<br>Din Daeng, Bangkok<br>Thailand</p>
@@ -1274,19 +1249,15 @@
                     <div class="info-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE" style="width:28px; height:28px;"></div>
                     <div class="info-content">
                         <h4 data-i18n="line_label">LINE Official</h4>
-                        <p><a href="https://line.me/R/ti/p/@flinspabkk">@flinspabkk</a></p>
-                        <div class="line-qr-container" onclick="openQrLightbox()">
-                            <img src="line_qr.jpg" alt="LINE QR Code - F.Lin Barber & Massage" class="line-qr-img">
-                            <p class="qr-hint" data-i18n="menu_tap">Tap to enlarge</p>
-                        </div>
+                        <p><a href="javascript:void(0)" onclick="openQrLightbox()" style="color:var(--soft-sage); text-decoration:underline; cursor:pointer;">@flinbarber-bkk</a></p>
                     </div>
                 </div>
                 
                 <div class="info-item">
-                    <div class="info-icon">📸</div>
+                    <div class="info-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width:28px; height:28px; border-radius:6px;"></div>
                     <div class="info-content">
                         <h4>Instagram</h4>
-                        <p><a href="https://instagram.com/flin.hairspa">@flin.hairspa</a></p>
+                        <p style="color: var(--deep-moss); opacity:0.7; font-style:italic;">Coming Soon</p>
                     </div>
                 </div>
                 
@@ -1302,11 +1273,11 @@
                     <div class="info-icon">🕐</div>
                     <div class="info-content">
                         <h4 data-i18n="hours_label">Opening Hours</h4>
-                        <p data-i18n="hours_text">Monday - Sunday<br>10:00 AM - 8:00 PM</p>
+                        <p data-i18n="hours_text">Monday - Sunday<br>10:00 AM - 10:00 PM</p>
                     </div>
                 </div>
                 
-                <a href="https://line.me/R/ti/p/@flinspabkk" class="btn-primary" style="display: inline-block; margin-top: 2rem;" data-i18n="book_appointment">Book Appointment Now</a>
+                <a href="javascript:void(0)" onclick="openQrLightbox()" class="btn-primary" style="display: inline-block; margin-top: 2rem;" data-i18n="book_appointment">Book Appointment Now</a>
             </div>
         </div>
     </section>
@@ -1318,8 +1289,8 @@
                 <div class="footer-logo">F.Lin Hair Spa</div>
                 <p class="footer-description" data-i18n="footer_desc">Vietnamese-inspired head spa rituals bringing calm, wellness, and beauty to Bangkok. A sanctuary for your scalp, mind, and body.</p>
                 <div class="social-icons">
-                    <a href="https://line.me/R/ti/p/@flinspabkk" class="social-icon">💬</a>
-                    <a href="https://instagram.com/flin.hairspa" class="social-icon">📷</a>
+                    <a href="javascript:void(0)" onclick="openQrLightbox()" class="social-icon">💬</a>
+                    <a href="javascript:void(0)" class="social-icon" style="opacity:0.5; cursor:default;">📷</a>
                     <a href="https://facebook.com/flinhairspa" class="social-icon">📘</a>
                 </div>
             </div>
@@ -1328,7 +1299,7 @@
                 <h4 data-i18n="footer_links_title">Quick Links</h4>
                 <ul class="footer-links">
                     <li><a href="#treatments" data-i18n="footer_link_treatments">Treatments</a></li>
-                    <li><a href="#booking" data-i18n="footer_link_book">Book Now</a></li>
+                    <li><a href="javascript:void(0)" onclick="openQrLightbox()" data-i18n="footer_link_book">Book Now</a></li>
                     <li><a href="#about" data-i18n="footer_link_about">About Us</a></li>
                     <li><a href="#contact" data-i18n="footer_link_contact">Contact</a></li>
                 </ul>
@@ -1349,7 +1320,7 @@
                     <li>F.Lin Barber & Massage</li>
                     <li>Din Daeng, Bangkok</li>
                     <li><a href="tel:+66933155843">093-315-5843</a></li>
-                    <li><a href="https://line.me/R/ti/p/@flinspabkk">LINE: @flinspabkk</a></li>
+                    <li><a href="https://line.me/R/ti/p/@flinbarber-bkk">@flinbarber-bkk</a></li>
                 </ul>
             </div>
         </div>
@@ -1465,7 +1436,7 @@
                 line_label: "LINE Official",
                 phone_label: "Phone",
                 hours_label: "Opening Hours",
-                hours_text: "Monday - Sunday<br>10:00 AM - 8:00 PM",
+                hours_text: "Monday - Sunday<br>10:00 AM - 10:00 PM",
                 book_appointment: "Book Appointment Now",
                 footer_desc: "Vietnamese-inspired head spa rituals bringing calm, wellness, and beauty to Bangkok. A sanctuary for your scalp, mind, and body.",
                 footer_links_title: "Quick Links",
@@ -1664,21 +1635,20 @@
                 var lbImg = document.getElementById('lightboxImg');
                 lbImg.src = img.src;
                 lbImg.alt = img.alt;
+                lbImg.className = 'lightbox-img menu-lightbox';
                 lb.classList.add('active');
                 document.body.style.overflow = 'hidden';
             }
         }
 
         function openQrLightbox() {
-            var img = document.querySelector('.line-qr-img');
-            if (img) {
-                var lb = document.getElementById('lightbox');
-                var lbImg = document.getElementById('lightboxImg');
-                lbImg.src = img.src;
-                lbImg.alt = img.alt;
-                lb.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
+            var lb = document.getElementById('lightbox');
+            var lbImg = document.getElementById('lightboxImg');
+            lbImg.src = 'line_qr.jpg';
+            lbImg.alt = 'LINE QR Code - F.Lin Barber & Massage';
+            lbImg.className = 'lightbox-img';
+            lb.classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
 
         function openLightbox(el) {
