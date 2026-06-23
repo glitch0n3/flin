@@ -888,6 +888,7 @@
             max-width: 90vw;
             max-height: 85vh;
             padding: 0;
+            background: none;
         }
 
         .lightbox-close {
@@ -937,7 +938,6 @@
                 grid-template-columns: 1fr;
             }
         }
-        /* LINE QR Lightbox sizing handled in .lightbox-img */
     </style>
     <!-- Language Switcher -->
     <nav class="lang-nav" id="langNav">
@@ -1018,6 +1018,50 @@
         </div>
     </section>
 
+    <!-- Signature Treatments -->
+    <section id="treatments" class="section fade-in">
+        <h2 class="section-title" data-i18n="treatments_title">Signature Packages</h2>
+        <p class="section-subtitle" data-i18n="treatments_subtitle">Choose your path to tranquility</p>
+        
+        <div class="treatments-grid">
+            <div class="treatment-card">
+                <div class="treatment-header">
+                    <h3 data-i18n="treat1_name">Essential Relieve</h3>
+                    <p class="treatment-duration"><span data-i18n="treat1_duration">60 minutes</span> · <span data-i18n="treat1_choose">Choose 4</span></p>
+                </div>
+                <div class="treatment-body">
+                    <p class="treatment-description" data-i18n="treat1_desc">Select four services from our menu — foot scrub, ear cleaning, shaving, massage, facial, wash &amp; dry, or nail care — for a personalized essential relief session</p>
+                    <p class="treatment-price">฿600</p>
+                    <a href="javascript:void(0)" onclick="openQrLightbox()" class="treatment-cta" data-i18n="book_treatment">Book This Treatment</a>
+                </div>
+            </div>
+
+            <div class="treatment-card treatment-card-featured">
+                <div class="treatment-header">
+                    <h3 data-i18n="treat2_name">Signature Head Spa</h3>
+                    <p class="treatment-duration"><span data-i18n="treat2_duration">90 minutes</span> · <span data-i18n="treat2_choose">Full Package</span></p>
+                </div>
+                <div class="treatment-body">
+                    <p class="treatment-description" data-i18n="treat2_desc">The complete F.Lin experience — all eight signature services from foot scrub to nail care, delivering head-to-toe restoration in one luxurious session</p>
+                    <p class="treatment-price">฿800</p>
+                    <a href="javascript:void(0)" onclick="openQrLightbox()" class="treatment-cta" data-i18n="book_treatment">Book This Treatment</a>
+                </div>
+            </div>
+
+            <div class="treatment-card">
+                <div class="treatment-header">
+                    <h3 data-i18n="treat3_name">Premium Total Care Therapy</h3>
+                    <p class="treatment-duration"><span data-i18n="treat3_duration">100 minutes</span> · <span data-i18n="treat3_choose">Head Spa + Foot Tub + Ear Candling</span></p>
+                </div>
+                <div class="treatment-body">
+                    <p class="treatment-description" data-i18n="treat3_desc">A complete sensory ritual combining head spa, ear care, and soothing foot soak for total relaxation</p>
+                    <p class="treatment-price">฿1,200</p>
+                    <a href="javascript:void(0)" onclick="openQrLightbox()" class="treatment-cta" data-i18n="book_treatment">Book This Treatment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Service Menu -->
     <section id="menu" class="section fade-in">
         <h2 class="section-title" data-i18n="menu_title">Our Services</h2>
@@ -1036,50 +1080,6 @@
         <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
         <img id="lightboxImg" class="lightbox-img" src="" alt="">
     </div>
-
-    <!-- Signature Treatments -->
-    <section id="treatments" class="section fade-in">
-        <h2 class="section-title" data-i18n="treatments_title">Signature Packages</h2>
-        <p class="section-subtitle" data-i18n="treatments_subtitle">Choose your path to tranquility</p>
-        
-        <div class="treatments-grid">
-            <div class="treatment-card">
-                <div class="treatment-header">
-                    <h3 data-i18n="treat1_name">Essential Relieve</h3>
-                    <p class="treatment-duration"><span data-i18n="treat1_duration">60 minutes</span> · <span data-i18n="treat1_choose">Choose 4</span></p>
-                </div>
-                <div class="treatment-body">
-                    <p class="treatment-description" data-i18n="treat1_desc">Select four services from our menu — foot scrub, ear cleaning, shaving, massage, facial, wash &amp; dry, or nail care — for a personalized essential relief session</p>
-                    <p class="treatment-price">฿700</p>
-                    <a href="javascript:void(0)" onclick="openQrLightbox()" class="treatment-cta" data-i18n="book_treatment">Book This Treatment</a>
-                </div>
-            </div>
-
-            <div class="treatment-card treatment-card-featured">
-                <div class="treatment-header">
-                    <h3 data-i18n="treat2_name">Signature Head Spa</h3>
-                    <p class="treatment-duration"><span data-i18n="treat2_duration">90 minutes</span> · <span data-i18n="treat2_choose">Full Package</span></p>
-                </div>
-                <div class="treatment-body">
-                    <p class="treatment-description" data-i18n="treat2_desc">The complete F.Lin experience — all eight signature services from foot scrub to nail care, delivering head-to-toe restoration in one luxurious session</p>
-                    <p class="treatment-price">฿1,000</p>
-                    <a href="javascript:void(0)" onclick="openQrLightbox()" class="treatment-cta" data-i18n="book_treatment">Book This Treatment</a>
-                </div>
-            </div>
-
-            <div class="treatment-card">
-                <div class="treatment-header">
-                    <h3 data-i18n="treat3_name">Premium Total Care Therapy</h3>
-                    <p class="treatment-duration"><span data-i18n="treat3_duration">100 minutes</span> · <span data-i18n="treat3_choose">Head Spa + Foot Tub + Ear Candling</span></p>
-                </div>
-                <div class="treatment-body">
-                    <p class="treatment-description" data-i18n="treat3_desc">A complete sensory ritual combining head spa, ear care, and soothing foot soak for total relaxation</p>
-                    <p class="treatment-price">฿1,500</p>
-                    <a href="javascript:void(0)" onclick="openQrLightbox()" class="treatment-cta" data-i18n="book_treatment">Book This Treatment</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Treatment Flow -->
     <section class="section fade-in">
@@ -1238,26 +1238,10 @@
                 <h3 data-i18n="booking_title">Book Your Ritual</h3>
                 
                 <div class="info-item">
-                    <div class="info-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Google_Maps_Logo_2020.svg" alt="Google Maps" style="width:28px; height:28px;"></div>
+                    <div class="info-icon">📍</div>
                     <div class="info-content">
                         <h4 data-i18n="address_label">Address</h4>
                         <p data-i18n="address_text">F.Lin Barber & Massage<br>Din Daeng, Bangkok<br>Thailand</p>
-                    </div>
-                </div>
-                
-                <div class="info-item">
-                    <div class="info-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE" style="width:28px; height:28px;"></div>
-                    <div class="info-content">
-                        <h4 data-i18n="line_label">LINE Official</h4>
-                        <p><a href="javascript:void(0)" onclick="openQrLightbox()" style="color:var(--soft-sage); text-decoration:underline; cursor:pointer;">@flinbarber-bkk</a></p>
-                    </div>
-                </div>
-                
-                <div class="info-item">
-                    <div class="info-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width:28px; height:28px; border-radius:6px;"></div>
-                    <div class="info-content">
-                        <h4>Instagram</h4>
-                        <p style="color: var(--deep-moss); opacity:0.7; font-style:italic;">Coming Soon</p>
                     </div>
                 </div>
                 
@@ -1273,7 +1257,7 @@
                     <div class="info-icon">🕐</div>
                     <div class="info-content">
                         <h4 data-i18n="hours_label">Opening Hours</h4>
-                        <p data-i18n="hours_text">Monday - Sunday<br>10:00 AM - 10:00 PM</p>
+                        <p data-i18n="hours_text">Monday - Sunday<br>10:00 AM - 8:00 PM</p>
                     </div>
                 </div>
                 
@@ -1289,9 +1273,10 @@
                 <div class="footer-logo">F.Lin Hair Spa</div>
                 <p class="footer-description" data-i18n="footer_desc">Vietnamese-inspired head spa rituals bringing calm, wellness, and beauty to Bangkok. A sanctuary for your scalp, mind, and body.</p>
                 <div class="social-icons">
-                    <a href="javascript:void(0)" onclick="openQrLightbox()" class="social-icon">💬</a>
-                    <a href="javascript:void(0)" class="social-icon" style="opacity:0.5; cursor:default;">📷</a>
-                    <a href="https://facebook.com/flinhairspa" class="social-icon">📘</a>
+                    <a href="https://www.facebook.com/profile.php?id=61590721381610" class="social-icon" title="Facebook"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" style="width:20px; height:20px;"></a>
+                    <a href="https://www.instagram.com/flinbarbermassage/" class="social-icon" title="Instagram"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width:20px; height:20px; border-radius:4px;"></a>
+                    <a href="https://www.tiktok.com/@flin.barber.massa" class="social-icon" title="TikTok"><img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok" style="width:20px; height:20px;"></a>
+                    <a href="javascript:void(0)" onclick="openQrLightbox()" class="social-icon" title="LINE"><img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE" style="width:20px; height:20px;"></a>
                 </div>
             </div>
             
@@ -1436,7 +1421,7 @@
                 line_label: "LINE Official",
                 phone_label: "Phone",
                 hours_label: "Opening Hours",
-                hours_text: "Monday - Sunday<br>10:00 AM - 10:00 PM",
+                hours_text: "Monday - Sunday<br>10:00 AM - 8:00 PM",
                 book_appointment: "Book Appointment Now",
                 footer_desc: "Vietnamese-inspired head spa rituals bringing calm, wellness, and beauty to Bangkok. A sanctuary for your scalp, mind, and body.",
                 footer_links_title: "Quick Links",
